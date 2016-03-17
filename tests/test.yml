@@ -1,0 +1,7 @@
+---
+# test file for vitalied.ubuntu-config
+
+- hosts: localhost
+  remote_user: root
+  roles:
+    - ansible-role-ubuntu-config
