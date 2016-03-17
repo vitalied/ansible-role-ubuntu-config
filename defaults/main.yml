@@ -1,2 +1,4 @@
 ---
 # defaults file for vitalied.ubuntu-config
+
+ubuntu_config_swappiness: 10
