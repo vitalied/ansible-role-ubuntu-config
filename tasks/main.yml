@@ -1,2 +1,14 @@
 ---
 # tasks file for vitalied.ubuntu-config
+
+- name: configure swappiness
+  command: sysctl vm.swappiness=10
+  changed_when: false
+  tags: vitalied.ubuntu-config
+
+- name: save swappiness config
+  lineinfile:
+    dest: /etc/sysctl.conf
+    regexp: ^vm.swappiness
+    line: vm.swappiness = {{ ubuntu_config_swappiness }}
+  tags: vitalied.ubuntu-config
